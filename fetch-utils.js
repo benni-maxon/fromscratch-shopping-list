@@ -12,14 +12,14 @@ export function getUser() {
 export async function checkAuth() {
     const user = getUser();
 
-    if (!user) location.replace('../');
+    if (!user) location.replace('/auth');
 }
 
-export async function redirectIfLoggedIn() {
-    if (getUser()) {
-        location.replace('./list');
-    }
-}
+// export async function redirectIfLoggedIn() {
+//     if (getUser()) {
+//         location.replace('./list');
+//     }
+// }
 
 export async function signUpUser(email, password) {
     return await client.auth.signUp({

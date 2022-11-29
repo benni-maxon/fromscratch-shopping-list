@@ -26,29 +26,26 @@
     </head>
 
     <body>
-        <main class="auth-main">
-            <div class="left">
-                <div class="auth-container">
-                    <form id="sign-in">
-                        <h3>Sign In</h3>
-                        <label>Email </label><input type="email" name="email" id="sign-in-email" />
-                        <label>Password </label
-                        ><input type="password" name="password" id="sign-in-password" />
-                        <button>Submit</button>
-                    </form>
-                </div>
-            </div>
-            <div class="right">
-                <div class="auth-container">
-                    <form id="sign-up">
-                        <h3>Sign Up</h3>
-                        <label>Email </label><input type="email" name="email" id="sign-up-email" />
-                        <label>Password </label
-                        ><input type="password" name="password" id="sign-up-password" />
-                        <button>Submit</button>
-                    </form>
-                </div>
-            </div>
+        <header class="page-header">
+            <img class="logo" src="/assets/html_css_js.png" />
+            <p class="title">User Auth</p>
+        </header>
+
+        <main>
+            <form id="auth-form">
+                <h2></h2>
+                <label>
+                    Email
+                    <input type="email" name="email" required />
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="password" required />
+                </label>
+                <button></button>
+                <p class="error"></p>
+                <a href=""></a>
+            </form>
         </main>
     </body>
 </html>
