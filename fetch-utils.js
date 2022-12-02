@@ -42,16 +42,14 @@ export async function signOutUser() {
 /* Data functions */
 
 export async function getListItems() {
-    const response = await client
-        .from('groceries')
-        .select()
-        .match({ user_id: client.auth.user().id });
-
-    return response;
+    const response = await client.from('groceries').select().match({ user_id: getUser().id });
+    return response.data;
 }
 
 export async function createListItem(item, quantity) {
-    const response = await client.from('groceries').insert([{ item, quantity }]);
+    const response = await client
+        .from('groceries')
+        .insert({ item, quantity, user_id: getUser().id });
 
     return response;
 }

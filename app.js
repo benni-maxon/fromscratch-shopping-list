@@ -7,7 +7,6 @@ import {
     createListItem,
     deleteAllListItems,
     getListItems,
-    redirectIfLoggedIn,
     signOutUser,
 } from './fetch-utils.js';
 
@@ -33,10 +32,8 @@ deleteButton.addEventListener('click', async () => {
 
 logoutButton.addEventListener('click', () => {
     signOutUser();
-});
 
-window.addEventListener('load', async () => {
-    await fetchAndDisplayList();
+    location.replace('./auth');
 });
 
 form.addEventListener('submit', async (e) => {
@@ -51,17 +48,16 @@ form.addEventListener('submit', async (e) => {
 
     form.reset();
 
-    await fetchAndDisplayList();
+    fetchAndDisplayList();
 });
 
 /* Display Functions */
 
 async function fetchAndDisplayList() {
     const list = await getListItems();
-
     listEl.textContent = '';
     for (let item of list) {
-        const listItemEl = document.createElement('p');
+        const listItemEl = document.createElement('li');
 
         listItemEl.classList.add('list-item');
 
@@ -76,6 +72,13 @@ async function fetchAndDisplayList() {
                 fetchAndDisplayList();
             });
         }
+
         listEl.append(listItemEl);
     }
 }
+
+function renderItem() {}
+
+window.addEventListener('load', async () => {
+    fetchAndDisplayList();
+});
