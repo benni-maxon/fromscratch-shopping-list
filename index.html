@@ -28,15 +28,16 @@
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/list.css" />
         <!-- add link for page specific css -->
     </head>
 
     <body>
-        <header>
-            <h1>Shopping time!</h1>
-            <div class="gutter-right logo">
-                <button id="logout">logout</button>
-            </div>
+        <header class="page-header">
+            <h2 class="title">Stock Up On Groceries!</h2>
+            <nav>
+                <a id="logout" href="auth">Sign Out</a>
+            </nav>
         </header>
         <main>
             <section>
@@ -48,13 +49,15 @@
                     <label>
                         Item:
                         <input name="item" />
+                        <button id="add-item-button">Add item</button>
                     </label>
-                    <button>Add item</button>
                 </form>
-                <ul class="list">
-                    <!-- list items -->
-                </ul>
-                <button class="delete">Delete list</button>
+                <div class="grocery-list">
+                    <ul class="list">
+                        <!-- list items -->
+                    </ul>
+                    <button class="delete">Delete list</button>
+                </div>
             </section>
         </main>
     </body>

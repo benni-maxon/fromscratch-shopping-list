@@ -1,7 +1,7 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: white;
-    --text-color: rgb(7, 5, 68);
+    --header-background: #588157;
+    --text-color: rgb(0, 0, 0);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
     --offset-color: rgb(217, 236, 217);
@@ -39,7 +39,7 @@ body {
 }
 
 .page-header .title {
-    font-size: 1.3em;
+    font-size: 2em;
     font-weight: 800;
     flex-grow: 2;
 }
@@ -68,8 +68,4 @@ main {
 
 .hidden {
     display: none;
-}
-
-.bought {
-    text-decoration: line-through;
 }
