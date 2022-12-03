@@ -1,6 +1,6 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: #588157;
+    --header-background: white;
     --text-color: rgb(0, 0, 0);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
@@ -24,7 +24,7 @@ body {
     position: sticky;
     top: 0;
     padding: 15px;
-    height: 80px;
+    height: 110px;
 
     display: flex;
     align-items: center;
@@ -42,6 +42,10 @@ body {
     font-size: 2em;
     font-weight: 800;
     flex-grow: 2;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .page-header nav {

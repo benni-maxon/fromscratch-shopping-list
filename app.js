@@ -61,7 +61,7 @@ async function fetchAndDisplayList() {
 
         listItemEl.classList.add('list-item');
 
-        listItemEl.textContent = `${item.quantity} ${item.item}`;
+        listItemEl.textContent = `${item.quantity}x ${item.item}`;
 
         if (item.bought) {
             listItemEl.classList.add('bought');

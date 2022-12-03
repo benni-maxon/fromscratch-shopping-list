@@ -13,14 +13,30 @@
 
 body {
     text-align: center;
+    background: url(/assets/bamboo-bg.jpeg);
 }
 
-header {
-    background: rgb(172, 133, 82);
+#grocery-header {
+    background: linear-gradient(135deg, #3a5a40d5 20%, #a3b18ad7), url(/assets/metal.jpeg);
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
+
+#list-time {
+    letter-spacing: 2px;
+    color: rgb(203, 211, 205);
+    background-color: rgba(56, 56, 56, 0.681);
+    border-left: solid 4px rgb(27, 27, 27);
+    border-top: solid 4px rgb(27, 27, 27);
+    border-right: solid 4px rgb(52, 52, 52);
+    border-bottom: solid 4px rgb(52, 52, 52);
+    border-radius: 15px;
+    padding: 10px 0px 15px 0px;
+    margin-top: 35px;
 }
 
 main {
-    background: linear-gradient(135deg, #a3b18a 60%, #3a5a40);
+    background: linear-gradient(135deg, #a3b18ad7 60%, #3a5a40d5);
     background-position: stretch;
     background-repeat: no-repeat;
     display: flex;
@@ -88,8 +104,8 @@ input {
 }
 
 .list {
-    min-height: 400px;
-    min-width: 300px;
+    min-height: 300px;
+    min-width: 250px;
     background: linear-gradient(45deg, #dad7cd, rgb(116, 91, 61));
     border: solid 2px #3a5a40;
     border-radius: 5px;
@@ -102,11 +118,9 @@ input {
     margin: 5px;
 }
 
-h2 {
-    font-size: 2rem;
-}
-
 a {
+    background-color: #344e41;
+    color: white;
     text-decoration: none;
     border: inset 3px #344e41;
     border-radius: 20px;
@@ -115,7 +129,7 @@ a {
 }
 
 a:visited {
-    color: black;
+    color: white;
 }
 
 .bought {
